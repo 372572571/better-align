@@ -130,5 +130,25 @@ $data = array(
     'text'            =>   'something',
     'here is another' =>   'sample'
 );
+```
 
+- vscode 插件打包
+
+	- 必要依赖
+
+	```javascript
+	# 打包工具
+	npm install -g vsce
+
+	```
+
+- 打包安装流程
+
+```js
+# 打包
+vsce package
+# 发布
+vsce publish
+# 本地安装
+code --install-extension 插件生成的名称.vsix
 ```
