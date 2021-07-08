@@ -187,7 +187,7 @@ export default class Formatter {
         || next == "*"
       ) ) {
         currTokenType = TokenType.Comment;
-      } else if ( char == ":" && next != ":" ) {
+      } else if ( char == ":" && (next != ":"&&next != "=") ) {
         currTokenType = TokenType.Colon;
       } else if ( char == "," ) {
         if ( lt.tokens.length == 0 || (lt.tokens.length == 1 && lt.tokens[0].type == TokenType.Whitespace) ) {
@@ -201,7 +201,7 @@ export default class Formatter {
       } else if ( char == "=" && next == "=" ) {
         currTokenType = TokenType.Word;
         nextSeek = 2;
-      } else if (( char == "+" || char == "-" || char == "*" || char == "/" ) && next == "=" ) {
+      } else if (( char == "!"|| char == ":" ||char == "+" || char == "-" || char == "*" || char == "/" ) && next == "=" ) {
         currTokenType = TokenType.Assignment;
         nextSeek = 2;
       } else if ( char == "=" && next != "=" ) {

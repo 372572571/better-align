@@ -1,5 +1,5 @@
 {
-    "name": "better-align",
+    "name": "better-align-test",
     "displayName": "Better Align",
     "description": "Align code without selecting them first.",
     "version": "1.1.7",
@@ -47,7 +47,7 @@
                             1,
                             1
                         ],
-                        "arrow":[
+                        "arrow": [
                             1,
                             1
                         ],
@@ -70,9 +70,18 @@
         "configurationDefaults": {
             "[shellscript]": {
                 "alignment.surroundSpace": {
-                    "colon": [ 0, 1 ],
-                    "assignment": [ -1, -1 ],
-                    "arrow":[ 1, 1 ],
+                    "colon": [
+                        0,
+                        1
+                    ],
+                    "assignment": [
+                        -1,
+                        -1
+                    ],
+                    "arrow": [
+                        1,
+                        1
+                    ],
                     "comment": 2
                 }
             }
@@ -85,10 +94,10 @@
         "test": "node ./node_modules/vscode/bin/test"
     },
     "devDependencies": {
-        "typescript": "^2.0.3",
-        "vscode": "^1.0.0",
-        "mocha": "^2.3.3",
+        "@types/mocha": "^2.2.32",
         "@types/node": "^6.0.40",
-        "@types/mocha": "^2.2.32"
+        "mocha": "^2.3.3",
+        "typescript": "^3.9.7",
+        "vscode": "^1.0.0"
     }
 }
