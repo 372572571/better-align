@@ -201,7 +201,7 @@ export default class Formatter {
       } else if ( char == "=" && next == "=" ) {
         currTokenType = TokenType.Word;
         nextSeek = 2;
-      } else if (( char == "!"|| char == ":" ||char == "+" || char == "-" || char == "*" || char == "/" ) && next == "=" ) {
+      } else if ((char == "<"||char == ">"|| char == "!"|| char == ":" ||char == "+" || char == "-" || char == "*" || char == "/" ) && next == "=" ) {
         currTokenType = TokenType.Assignment;
         nextSeek = 2;
       } else if ( char == "=" && next != "=" ) {
